@@ -1,0 +1,151 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: antiquewhite;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 20px;
+}
+
+.hero__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero__subtitle {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.hero__link {
+  font-size: 32px;
+  color: black;
+}
+.hero__link:hover {
+  color: gray;
+}
+
+.hero__box {
+  max-height: 450px;
+  justify-self: center;
+  overflow: hidden;
+  border: 10px solid antiquewhite;
+
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: ava-animate 5s infinite alternate;
+}
+
+.hero__box-img {
+  margin-top: -300px;
+  height: 1000px;
+  width: 500px;
+}
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 54% 46% 43% 57% / 51% 42% 58% 49%;
+  }
+  40% {
+    border-radius: 54% 46% 84% 16% / 26% 40% 60% 74%;
+  }
+  60% {
+    border-radius: 25% 75% 43% 57% / 81% 9% 91% 19%;
+  }
+  100% {
+    border-radius: 25% 75% 84% 16% / 26% 9% 91% 74%;
+  }
+}
+
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+  to {
+    backdrop-filter: hue-rotate(90deg);
+  }
+}
+.hero__box-img {
+  animation: ava-bg 3s infinite alternate;
+}
+
+.headtext1 {
+  color: black;
+  font-size: xx-large;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgb(14, 1, 1);
+  text-decoration-line: none;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+
+  position: relative;
+  animation: text 4s 1;
+}
+
+.headtext1:hover {
+  color: blueviolet;
+}
+
+@keyframes text {
+  0% {
+    color: antiquewhite;
+    margin-bottom: -40px;
+  }
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+  85% {
+    letter-spacing: 5px;
+    margin-bottom: -40px;
+  }
+}
